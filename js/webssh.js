@@ -8,7 +8,7 @@ WSSHClient.prototype._generateEndpoint = function () {
         var protocol = 'ws://';
     }
     //websocket地址
-    var endpoint = protocol+'localhost:80/webssh';
+    var endpoint = protocol+'localhost:33330/webssh';
     return endpoint;
 };
 

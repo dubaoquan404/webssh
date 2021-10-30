@@ -16,7 +16,7 @@
 		// var paramStr = sessionStorage.getItem(id);
 		// var param = JSON.parse(paramStr);
         //ssh登录参数
-        var param = {"host":"192.168.174.6","port":"22","username":"deploy","password":"dell@105B"};
+        var param = {"host":"172.20.10.4","port":"22","username":"root","password":"OJXW65A"};
 		openTerminal( {
 	        operate:'connect',
             host: param['host'],//IP
@@ -28,10 +28,12 @@
 
 
     function openTerminal(options){
+        let clientWidth = document.body.clientWidth
         var client = new WSSHClient();
         var term = new Terminal({
-            cols: 97,
-            rows: 37,
+            // 设置屏幕宽度
+            cols: clientWidth,
+            // rows: 37,
             cursorBlink: true, // 光标闪烁
             cursorStyle: "block", // 光标样式  null | 'block' | 'underline' | 'bar'
             scrollback: 800, //回滚
